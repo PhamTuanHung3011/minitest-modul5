@@ -1,0 +1,24 @@
+<p>create-book works!</p>
+
+<div class="container">
+  <form  (ngSubmit)="create()" [formGroup]="formCreate">
+    <br>
+
+    nhập name
+    <br>
+    <input formControlName="nameBook">
+    <p *ngIf="!formCreate?.get('nameBook')?.valid" style="color: red">* không được nhập dưới 6 ký tự</p>
+    <br>
+    nhập price
+    <br>
+    <input formControlName="author">
+    <br>
+    <br>
+    nhập description
+    <br>
+    <input formControlName="description">
+    <br>
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+  <button [routerLink]="['/book/list-book']" > Back to home</button>
+</div>

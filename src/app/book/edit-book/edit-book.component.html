@@ -1,0 +1,26 @@
+<p>edit-book works!</p>
+
+
+<div class="container">
+  <form >
+    id Tour
+    <br>
+    <input [(ngModel)]="book.id" name="id" readonly>
+    <br>
+    nhập name
+    <br>
+    <input [(ngModel)]="book.nameBook" name="nameBook" >
+    <br>
+    nhập author
+    <br>
+    <input [(ngModel)]="book.author" name="author">
+    <br>
+    description
+    <br>
+    <input [(ngModel)]="book.description" name="description"><br>
+
+    <button type="submit" class="btn btn-success" (click)="edit()">Save</button>
+  </form>
+
+  <button [routerLink]="['/book/list-book']" > Back to home</button>
+</div>
